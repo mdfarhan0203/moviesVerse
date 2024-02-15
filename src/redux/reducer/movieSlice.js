@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Api Key
 const APIKey = "619e6513";
-const baseURL = "http://www.omdbapi.com";
+const baseURL = "https://www.omdbapi.com";
 
 const initialState = {
   moviesList: {},
