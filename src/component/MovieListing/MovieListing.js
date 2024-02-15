@@ -10,7 +10,6 @@ const MovieListing = () => {
 
   const movies = useSelector(getAllMovies);
   const series = useSelector(getAllSeries);
-console.log(movies.Error);
 
   // Do Error Handling
   return (
