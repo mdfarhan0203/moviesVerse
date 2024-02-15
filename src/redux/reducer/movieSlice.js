@@ -22,7 +22,7 @@ export const fetchMovies = createAsyncThunk("movie/fetchMovies", async (movieNam
     );
     return responseMovies.data;
   } catch (error) {
-    console.log(error.message);r
+    console.log(error.message);
     return error.message
   }
 });
