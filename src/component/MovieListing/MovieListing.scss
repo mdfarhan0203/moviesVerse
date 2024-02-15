@@ -1,0 +1,17 @@
+@import "../../common//color.scss";
+
+h2{
+    color: $primary-font-color;
+    font-weight: 600;
+}
+// 
+.movies-list{
+    background-color: $secondary-bgColor;
+}
+.listing-movies,.listing-series{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}

@@ -1,0 +1,45 @@
+@import "../../common/color.scss";
+
+.movie-details {
+  background-color: red;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: $secondary-bgColor;
+  line-height: 2rem;
+}
+.movies-desc {
+  padding: 1rem;
+  width: 50%;
+}
+
+.sub-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.director-title,
+.stars-title,
+.generes-title,
+.language-title {
+  margin-left: 1rem;
+}
+
+h2,
+h5,
+.desc-plot {
+  color: $primary-font-color;
+  font-weight: 400;
+}
+.desc-plot,
+th {
+  color: $primary-font-color;
+}
+tr {
+  color: #ff8911;
+}
+.movies-title {
+  margin-bottom: 2rem;
+}

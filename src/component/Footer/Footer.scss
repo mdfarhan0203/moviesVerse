@@ -1,0 +1,31 @@
+@import "../../common/color.scss";
+
+.footer-container{
+    padding-top: 1rem;
+    background-color: $primary-bgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+.autho-name{
+    color: white;
+    font: $primary-bgColor;
+}
+.creator{
+    color: #FF8080;
+    font-weight: 600;
+}
+.social-media{
+    width: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkedin,.github{
+    cursor: pointer;
+    height: 2rem;
+    background-color: #062579;
+    color:black;
+}
