@@ -17,20 +17,18 @@ const initialState = {
 // --> second params --> async function that performs the asynchronous operation.
 export const fetchMovies = createAsyncThunk("movie/fetchMovies", async (movieName="india") => {
   try {
-    console.log(movieName);
     let responseMovies = await axios.get(
       `${baseURL}/?apiKey=${APIKey}&type=movie&s=${movieName}`
     );
     return responseMovies.data;
   } catch (error) {
-    console.log(error.message);
+    console.log(error.message);r
     return error.message
   }
 });
 
 export const fetchShows = createAsyncThunk("movie/fetchShows", async (showName="india") => {
   try {
-    console.log(showName);
     let responseSeries = await axios.get(
       `${baseURL}/?apiKey=${APIKey}&type=series&s=${showName}`
     );
@@ -67,23 +65,24 @@ export const movieSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchMovies.pending, (state) => {
+    builder
+    .addCase(fetchMovies.pending, (state) => {
       state.loading = true;
-    }),
-      builder.addCase(fetchMovies.fulfilled, (state, { payload }) => {
+    })
+      .addCase(fetchMovies.fulfilled, (state, { payload }) => {
         state.loading = false;
         state.moviesList = payload;
-      }),
-      builder.addCase(fetchMovies.rejected, (state) => {
+      })
+      .addCase(fetchMovies.rejected, (state) => {
         state.loading = false;
-      }),
+      })
       // for series show
-      builder.addCase(fetchShows.fulfilled, (state, { payload }) => {
+      .addCase(fetchShows.fulfilled, (state, { payload }) => {
         state.loading = false;
         state.seriesList = payload;
-      }),
+      })
       // for series show
-      builder.addCase(fetchMoviesOrShow.fulfilled, (state, { payload }) => {
+      .addCase(fetchMoviesOrShow.fulfilled, (state, { payload }) => {
         state.loading = false;
         state.selectedMoviesOrShow = payload;
       });
@@ -94,4 +93,5 @@ export const { addMovies, addSeries ,removeMoieOrShow} = movieSlice.actions;
 export const getAllMovies = (state) => state.movie.moviesList;
 export const getAllSeries = (state) => state.movie.seriesList; //sliceName -->movie  seriesName --->Properties
 export const getSelectedMovieOrShow = (state)=>state.movie.selectedMoviesOrShow;
+// export const removeMoieOrShow = (state)=>state.movie.selectedMoviesOrShow
 export default movieSlice.reducer;
