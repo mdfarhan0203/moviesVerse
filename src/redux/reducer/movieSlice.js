@@ -35,6 +35,7 @@ export const fetchShows = createAsyncThunk("movie/fetchShows", async (showName="
     return responseSeries.data;
   } catch (error) {
     console.log(error.message);
+    return error.message
   }
 });
 
