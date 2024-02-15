@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/moviesVerse/static/css/main.03e04356.css",
+    "main.js": "/moviesVerse/static/js/main.30ae71d5.js",
+    "static/media/user-logo.jpg": "/moviesVerse/static/media/user-logo.5d5b6a5dd26ee02be71a.jpg",
+    "index.html": "/moviesVerse/index.html",
+    "main.03e04356.css.map": "/moviesVerse/static/css/main.03e04356.css.map",
+    "main.30ae71d5.js.map": "/moviesVerse/static/js/main.30ae71d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03e04356.css",
+    "static/js/main.30ae71d5.js"
+  ]
+}
